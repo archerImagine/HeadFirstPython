@@ -10,9 +10,10 @@ movies = [
 
 print(movies)
 print(len(movies))
+print("===============================================================================================")
 for each_item in movies:
     print(each_item)
-
+print("===============================================================================================")
 for each_item in movies:
     if isinstance(each_item,list):
         for item in each_item:
