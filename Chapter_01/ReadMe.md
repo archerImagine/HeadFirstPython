@@ -217,7 +217,54 @@ for nested_item in each_item:
     if isinstance(nested_item,list):
 ````
 
-As many times we encounter a sublist we have to put such code block. 
+As many times we encounter a sublist we have to put such code block. To help in this condition we have recursion and functions to thanks.
+
+## Function & Recursion ##
+
+### Function ###
+
+Functions are a named variable for a block of code. When we have to repeat same piece of code multiple times we can extract it to make a function. This function can again be used in multiple places.
+
+The syntax of a function is:-
+
+````
+def function_name(argument(s)):
+    function code block.
+````
+
+As shown in the above piece of syntax, we have a `function_name`, this `function_name` can be used to execute the function code block by calling it using `function_name()`.
+
+The above multiple lines of code can be condensed into this.
+
+````
+def print_lol(the_list):
+    for list_item in the_list:
+        if isinstance(list_item,list):
+            print_lol(list_item) # This call to the same function is called Recursion.
+        else:
+            print(list_item)
+````
+
+In the above code if you see we have reduced the total no of line of code, and we are calling the same `print_lol` again, this philosophy is called Recursion.
+
+The default recursion limit can be 1000 in Python, understanding this we have to think of recursion as putting the function on to a [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)). The maximum size a stack can grow in python is 1000.
+
+## Bullet Points ##
+
+This section is a revision of what we have learned till now. 
+
+* Identifiers are name that refer to data objects. The identifier have no type but the data type to which they refer to do.
+* A list is a collection of data, separated by commas and surrounded by square brackets.
+* List are like array on steroids.
+* List can be used with built in functions and also support a bunch of list methods.
+* List can hold any data, and the data can be of mixed type. Lists can also hold list.
+* List can shrink and grow as needed. All the memory required for this is managed by Python.
+* Python uses Indentation to group statements together.
+* `len()` provides a length of some data objects or count the number of items in a collection like a list.
+* The `for` loop lets you to iterate over a list and is convenient to use in place of a `while` loop.
+* The `if .. else` statements help in decision making in the code.
+* `isinstance()` checks whether an identifier refers to a particular data type of not.
+* `def` is used to define a custom keywords.
 
 ## References ##
 
